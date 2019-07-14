@@ -1,0 +1,41 @@
+{
+  "location": {
+    "name": "Paris",
+    "region": "Ile-de-France",
+    "country": "France",
+    "lat": 48.87,
+    "lon": 2.33,
+    "tz_id": "Europe/Paris",
+    "localtime_epoch": "1563103056",
+    "localtime": "2019-07-14 13:17"
+  },
+  "current": {
+    "last_updated_epoch": 1563102038,
+    "last_updated": "2019-07-14 13:00",
+    "temp_c": 19.0,
+    "temp_f": 66.2,
+    "is_day": 1,
+    "condition": {
+      "text": "Partly cloudy",
+      "icon": "//cdn.apixu.com/weather/64x64/day/116.png",
+      "code": 1003
+    },
+    "wind_mph": 13.6,
+    "wind_kph": 22.0,
+    "wind_degree": 10,
+    "wind_dir": "N",
+    "pressure_mb": 1020,
+    "pressure_in": 30.6,
+    "precip_mm": 0,
+    "precip_in": 0,
+    "humidity": 60,
+    "cloud": 75,
+    "feelslike_c": 19.0,
+    "feelslike_f": 66.2,
+    "vis_km": 10,
+    "vis_miles": 6,
+    "uv": 5,
+    "gust_mph": 14.8,
+    "gust_kph": 23.8
+  }
+}

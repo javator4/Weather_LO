@@ -3,6 +3,8 @@ package pl.sda;
 import org.apache.commons.io.IOUtils;
 import org.json.JSONObject;
 import pl.sda.model.Current;
+import pl.sda.model.Location;
+import pl.sda.model.Weather;
 
 import java.io.IOException;
 import java.net.URL;
@@ -13,7 +15,7 @@ public class WeatherService {
     private String url;
     private String apiKey;
     private String finalURL;
-    private String data;
+    private String data = "";
 
     public WeatherService(String url, String apiKey) {
         this.url = url;
@@ -21,27 +23,17 @@ public class WeatherService {
         this.finalURL = this.url + "?key=" + apiKey + "&q=";
     }
 
-    public WeatherService getJSONData(String city){
-        this.finalURL = this.finalURL + city;
-        try {
-            this.data =  IOUtils.toString(new URL(this.finalURL),
-                    Charset.forName("UTF-8"));
-        } catch (IOException e) {
-            e.printStackTrace();
+    public String getJSONData(String city){
+        if (this.data.isEmpty()) {
+            this.finalURL = this.finalURL + city;
+            System.out.println("WYWOLANIE");
+            try {
+                this.data = IOUtils.toString(new URL(this.finalURL),
+                        Charset.forName("UTF-8"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-        return this;
-    }
-
-    public Current getCityWeather() {
-        JSONObject jsonObject = new JSONObject(this.data);
-
-        String temp = jsonObject.getJSONObject("current")
-                    .get("temp_c").toString();
-        System.out.println(temp);
-
-        Current current =  Current.builder()
-                .temp_c(Float.parseFloat(temp))
-                .build();
-        return current;
+        return data;
     }
 }
