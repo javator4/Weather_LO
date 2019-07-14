@@ -32,6 +32,7 @@ public class App
                 = new FasterImplementation(weatherService, "torun");
 
         System.out.println(weatherForecast.getWeather());
+        System.out.println(weatherForecast1.getWeather());
 
 
     }

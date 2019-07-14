@@ -8,6 +8,15 @@ import java.io.IOException;
 import java.net.URL;
 
 public class FasterImplementation implements WeatherForecast{
+
+    private WeatherService weatherService;
+    private String city;
+
+    public FasterImplementation(WeatherService weatherService, String city) {
+        this.weatherService = weatherService;
+        this.city = city;
+    }
+
     @Override
     public Weather getWeather() {
         ObjectMapper objectMapper = new ObjectMapper();
