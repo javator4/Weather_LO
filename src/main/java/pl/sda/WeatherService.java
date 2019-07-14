@@ -21,6 +21,7 @@ public class WeatherService {
         this.url = url;
         this.apiKey = apiKey;
         this.finalURL = this.url + "?key=" + apiKey + "&q=";
+
     }
 
     public String getJSONData(String city){
@@ -30,8 +31,10 @@ public class WeatherService {
             try {
                 this.data = IOUtils.toString(new URL(this.finalURL),
                         Charset.forName("UTF-8"));
+
             } catch (IOException e) {
                 e.printStackTrace();
+
             }
         }
         return data;
