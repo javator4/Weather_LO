@@ -10,6 +10,7 @@ public class OrgImplementation implements WeatherForecast{
     private WeatherService weatherService;
     private String city;
 
+
     public OrgImplementation(WeatherService weatherService, String city) {
                 this.weatherService = weatherService;
                 this.city = city;

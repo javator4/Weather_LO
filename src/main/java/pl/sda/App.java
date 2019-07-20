@@ -40,5 +40,10 @@ public class App
         System.out.println(weatherForecast1.getWeather());
 
 
+
+        JsonDataFaster jsonDataFaster = new JsonDataFaster();
+        jsonDataFaster.getWeather();
+
+
     }
 }
