@@ -39,11 +39,14 @@ public class App
         System.out.println(weatherForecast.getWeather());
         System.out.println(weatherForecast1.getWeather());
 
-
-
         JsonDataFaster jsonDataFaster = new JsonDataFaster();
-        jsonDataFaster.getWeather();
+        jsonDataFaster.setApiKey("d48c0d5e40054b6a9e571834181808");
+        jsonDataFaster.setUrl("http://api.apixu.com/v1/current.json");
+        jsonDataFaster.setCity("Warszawa");
+        jsonDataFaster.build();
 
+        System.out.println(jsonDataFaster.getWeather());
 
+        System.out.println("TEST");
     }
 }
