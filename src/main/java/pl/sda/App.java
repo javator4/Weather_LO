@@ -9,6 +9,7 @@ import pl.sda.model.Weather;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.LinkedList;
 
 public class App 
 {
